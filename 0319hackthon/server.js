@@ -6,7 +6,17 @@ var cmd = require('node-cmd');
 
 server = http.createServer(function(req, res){
 	res.writeHead(200, {'Content=Type': 'text/plain'});
-	res.end(<head><body><a href:"http://google.com/">Hello</a></body></head>);
+	res.write('<!DOCTYPE html>\n');
+	res.write('<html lang="zh-cn">\n');
+	res.write('<head>\n');
+	res.write('<meta charset="utf-8">\n');
+	res.write('<title>NodeJS</title>\n');
+	res.write('</head>\n');
+	res.write('<body>');
+	res.write('<a href="http://google.com">Google</a>')
+	res.write('</body>');
+	res.write('</html>\n');
+	res.end();
 });
 
 server.listen(port, ip);
