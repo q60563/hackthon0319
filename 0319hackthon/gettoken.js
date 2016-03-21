@@ -4,8 +4,8 @@ var fs = require('fs');
 request.post({
 	url:	"https://api.ser.ideas.iii.org.tw:443/api/user/get_token",
 	form:	{
-		"id":"7bf8d957b71c9431b046699c2569a2c1",
-		"secret_key":"a3332778a64389f1b141fde63d0f95c0"
+		"id":"youID",
+		"secret_key":"youKEY"
 		}
 	},function(error, response, body){
         	
